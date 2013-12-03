@@ -7,6 +7,8 @@ a= 0;
 b=0;
 c=0;
 d=10;
+if(typeof (l) == "number")
+{
 while(l>0)
 {
     b=l%10;
@@ -16,4 +18,8 @@ while(l>0)
     if(b<d)
     d=b;
 }
+
 console.log("Max= "+c+" Min= "+ d);
+}
+else
+console.log("Ошибка");
