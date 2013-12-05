@@ -1,25 +1,26 @@
 /**
  * Created by vitalik on 03.12.13.
  */
-var l =1482;
-var a, b, c;
+var number =1482;
+var a, b, max, min;
 a= 0;
-b=0;
-c=0;
-d=10;
-if(typeof (l) == "number")
+b = 0;
+max = 0;
+min = 10;
+if(typeof (number) == "number")
 {
-while(l>0)
+    b = number % 10;
+while(number>0)
 {
-    b=l%10;
-    if(b>c)
-    {c=b;}
-    l=(l-l%10)/10;
-    if(b<d)
-    d=b;
+    max = number % 10;
+    if(b > max)
+        max = b;
+    number = (number - number % 10 ) / 10;
+    if(b < min)
+    min = b;
 }
 
-console.log("Max= "+c+" Min= "+ d);
+console.log("Max= " + max + " Min= " + min);
 }
 else
 console.log("Ошибка");
